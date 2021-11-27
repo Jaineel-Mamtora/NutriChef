@@ -1,5 +1,6 @@
-package com.trailblazing.modernfoodrecipesapp
+package com.trailblazing.modernfoodrecipesapp.data
 
+import com.trailblazing.modernfoodrecipesapp.data.network.FoodRecipesApi
 import com.trailblazing.modernfoodrecipesapp.models.FoodRecipe
 import retrofit2.Response
 import javax.inject.Inject

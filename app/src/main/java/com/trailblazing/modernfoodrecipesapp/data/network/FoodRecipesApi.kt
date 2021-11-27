@@ -1,4 +1,4 @@
-package com.trailblazing.modernfoodrecipesapp
+package com.trailblazing.modernfoodrecipesapp.data.network
 
 import com.trailblazing.modernfoodrecipesapp.models.FoodRecipe
 import retrofit2.Response
