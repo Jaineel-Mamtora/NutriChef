@@ -2,10 +2,12 @@ package com.trailblazing.modernfoodrecipesapp.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.trailblazing.modernfoodrecipesapp.databinding.RecipesRowLayoutBinding
 import com.trailblazing.modernfoodrecipesapp.models.FoodRecipe
 import com.trailblazing.modernfoodrecipesapp.models.Result
+import com.trailblazing.modernfoodrecipesapp.util.RecipesDiffUtil
 
 class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
 
@@ -42,8 +44,10 @@ class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
     }
 
     fun setData(newData: FoodRecipe) {
+        val recipesDiffUtil = RecipesDiffUtil(recipe, newData.results)
+        val diffUtilResult = DiffUtil.calculateDiff(recipesDiffUtil)
         recipe = newData.results
-        notifyDataSetChanged()
+        diffUtilResult.dispatchUpdatesTo(this)
     }
 
 }
