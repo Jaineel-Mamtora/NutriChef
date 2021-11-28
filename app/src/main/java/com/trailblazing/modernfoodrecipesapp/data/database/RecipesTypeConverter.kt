@@ -1,4 +1,4 @@
-package com.trailblazing.modernfoodrecipesapp
+package com.trailblazing.modernfoodrecipesapp.data.database
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson
