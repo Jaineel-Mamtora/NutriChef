@@ -1,7 +1,7 @@
 package com.trailblazing.modernfoodrecipesapp.di
 
-import com.trailblazing.modernfoodrecipesapp.util.Constants.Companion.BASE_URL
 import com.trailblazing.modernfoodrecipesapp.data.network.FoodRecipesApi
+import com.trailblazing.modernfoodrecipesapp.util.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
