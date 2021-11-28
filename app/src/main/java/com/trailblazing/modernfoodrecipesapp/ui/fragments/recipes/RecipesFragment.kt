@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.trailblazing.modernfoodrecipesapp.R
 import com.trailblazing.modernfoodrecipesapp.adapters.RecipesAdapter
 import com.trailblazing.modernfoodrecipesapp.util.NetworkResult
+import com.trailblazing.modernfoodrecipesapp.util.observeOnce
 import com.trailblazing.modernfoodrecipesapp.viewmodels.MainViewModel
 import com.trailblazing.modernfoodrecipesapp.viewmodels.RecipesViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -56,7 +57,9 @@ class RecipesFragment : Fragment() {
     private fun readDatabase() {
         lifecycleScope.launch {
             Log.d("RecipesFragment", "readDatabase called!")
-            mainViewModel.readRecipes.observe(viewLifecycleOwner, { database ->
+            // adding extension function 'observeOnce' to call requestApiData
+            // only once if data is already empty
+            mainViewModel.readRecipes.observeOnce(viewLifecycleOwner, { database ->
                 if (database.isNotEmpty()) {
                     mAdapter.setData(database[0].foodRecipe)
                     hideShimmerEffect()
