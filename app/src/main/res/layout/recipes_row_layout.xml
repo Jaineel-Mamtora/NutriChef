@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="result"
             type="com.trailblazing.modernfoodrecipesapp.models.Result" />
@@ -53,7 +54,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/courgette"
                     android:maxLines="2"
-                    android:text="TextView"
+                    android:text="@{result.title}"
                     android:textColor="@color/darker"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -69,7 +70,7 @@
                     android:layout_marginTop="12dp"
                     android:ellipsize="end"
                     android:maxLines="3"
-                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                    android:text="@{result.summary}"
                     android:textColor="@color/darkGray"
                     app:layout_constraintEnd_toEndOf="@+id/titleTextView"
                     app:layout_constraintStart_toStartOf="@+id/titleTextView"
@@ -92,6 +93,7 @@
 
                 <TextView
                     android:id="@+id/heartTextView"
+                    setNumberOfLikes="@{result.aggregateLikes}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="100"
@@ -112,6 +114,7 @@
 
                 <TextView
                     android:id="@+id/clockTextView"
+                    setNumberOfMinutes="@{result.readyInMinutes}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -123,6 +126,7 @@
 
                 <ImageView
                     android:id="@+id/leafImageView"
+                    applyVeganColor="@{result.vegan}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="@+id/leafTextView"
@@ -132,6 +136,7 @@
 
                 <TextView
                     android:id="@+id/leafTextView"
+                    applyVeganColor="@{result.vegan}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
