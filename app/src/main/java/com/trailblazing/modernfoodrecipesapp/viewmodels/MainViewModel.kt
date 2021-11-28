@@ -1,4 +1,4 @@
-package com.trailblazing.modernfoodrecipesapp
+package com.trailblazing.modernfoodrecipesapp.viewmodels
 
 import android.app.Application
 import android.content.Context
