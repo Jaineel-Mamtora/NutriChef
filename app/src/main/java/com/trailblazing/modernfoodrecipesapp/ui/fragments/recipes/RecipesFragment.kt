@@ -9,7 +9,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.trailblazing.modernfoodrecipesapp.R
 import com.trailblazing.modernfoodrecipesapp.adapters.RecipesAdapter
 import com.trailblazing.modernfoodrecipesapp.databinding.FragmentRecipesBinding
 import com.trailblazing.modernfoodrecipesapp.util.NetworkResult
@@ -48,6 +50,10 @@ class RecipesFragment : Fragment() {
         binding.mainViewModel = mainViewModel
         setupRecyclerView()
         readDatabase()
+
+        binding.recipesFab.setOnClickListener {
+            findNavController().navigate(R.id.action_recipesFragment_to_recipesBottomSheet)
+        }
 
 
         return binding.root
