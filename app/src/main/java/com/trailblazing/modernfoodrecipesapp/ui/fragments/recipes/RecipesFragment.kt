@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.trailblazing.modernfoodrecipesapp.R
 import com.trailblazing.modernfoodrecipesapp.adapters.RecipesAdapter
@@ -25,9 +26,10 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class RecipesFragment : Fragment() {
 
+    private val args by navArgs<RecipesFragmentArgs>()
+
     private var _binding: FragmentRecipesBinding? = null
     private val binding get() = _binding!!
-
 
     private lateinit var mainViewModel: MainViewModel
     private lateinit var recipesViewModel: RecipesViewModel
@@ -55,7 +57,6 @@ class RecipesFragment : Fragment() {
             findNavController().navigate(R.id.action_recipesFragment_to_recipesBottomSheet)
         }
 
-
         return binding.root
     }
 
@@ -71,7 +72,7 @@ class RecipesFragment : Fragment() {
             // adding extension function 'observeOnce' to call requestApiData
             // only once if data is already empty
             mainViewModel.readRecipes.observeOnce(viewLifecycleOwner, { database ->
-                if (database.isNotEmpty()) {
+                if (database.isNotEmpty() && !args.backFromBottomSheet) {
                     mAdapter.setData(database[0].foodRecipe)
                     hideShimmerEffect()
                 } else {
