@@ -10,6 +10,7 @@ import coil.load
 import com.trailblazing.modernfoodrecipesapp.R
 import com.trailblazing.modernfoodrecipesapp.models.Result
 import kotlinx.android.synthetic.main.fragment_overview.view.*
+import org.jsoup.Jsoup
 
 class OverviewFragment : Fragment() {
 
@@ -27,7 +28,10 @@ class OverviewFragment : Fragment() {
         view.titleTextView.text = myBundle?.title
         view.likesTextView.text = myBundle?.aggregateLikes.toString()
         view.timeTextView.text = myBundle?.readyInMinutes.toString()
-        view.summaryTextView.text = myBundle?.summary
+        myBundle?.summary.let {
+            val summary = Jsoup.parse(it).text()
+            view.summaryTextView.text = summary
+        }
 
         if (myBundle?.vegetarian == true) {
             view.vegetarianImageView.setColorFilter(
