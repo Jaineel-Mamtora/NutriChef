@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import coil.load
 import com.trailblazing.modernfoodrecipesapp.R
 import com.trailblazing.modernfoodrecipesapp.models.Result
+import com.trailblazing.modernfoodrecipesapp.util.Constants.Companion.RECIPE_RESULT_KEY
 import kotlinx.android.synthetic.main.fragment_overview.view.*
 import org.jsoup.Jsoup
 
@@ -22,7 +23,7 @@ class OverviewFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_overview, container, false)
 
         val args = arguments
-        val myBundle: Result? = args?.getParcelable("recipeBundle")
+        val myBundle: Result? = args?.getParcelable(RECIPE_RESULT_KEY)
 
         view.mainImageView.load(myBundle?.image)
         view.titleTextView.text = myBundle?.title

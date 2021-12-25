@@ -27,7 +27,10 @@ class IngredientsAdapter : RecyclerView.Adapter<IngredientsAdapter.MyViewHolder>
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.itemView.ingredient_imageView.load(BASE_IMAGE_URL + ingredientsList[position].image)
+        holder.itemView.ingredient_imageView.load(BASE_IMAGE_URL + ingredientsList[position].image) {
+            crossfade(600)
+            error(R.drawable.ic_error_placeholder)
+        }
         holder.itemView.ingredient_name.text = ingredientsList[position].name.replaceFirstChar {
             if (it.isLowerCase()) it.titlecase(
                 Locale.getDefault()
