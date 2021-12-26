@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.trailblazing.modernfoodrecipesapp.data.DataStoreRepository
-import com.trailblazing.modernfoodrecipesapp.util.Constants.Companion.API_KEY
+import com.trailblazing.modernfoodrecipesapp.util.ApiKey.Companion.API_KEY
 import com.trailblazing.modernfoodrecipesapp.util.Constants.Companion.DEFAULT_DIET_TYPE
 import com.trailblazing.modernfoodrecipesapp.util.Constants.Companion.DEFAULT_MEAL_TYPE
 import com.trailblazing.modernfoodrecipesapp.util.Constants.Companion.DEFAULT_RECIPES_NUMBER
