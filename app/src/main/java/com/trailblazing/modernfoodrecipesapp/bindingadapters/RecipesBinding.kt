@@ -4,7 +4,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
-import com.trailblazing.modernfoodrecipesapp.data.database.RecipesEntity
+import com.trailblazing.modernfoodrecipesapp.data.database.entities.RecipesEntity
 import com.trailblazing.modernfoodrecipesapp.models.FoodRecipe
 import com.trailblazing.modernfoodrecipesapp.util.NetworkResult
 

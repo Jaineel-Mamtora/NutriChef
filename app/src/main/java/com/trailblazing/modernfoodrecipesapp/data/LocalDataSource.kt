@@ -1,7 +1,7 @@
 package com.trailblazing.modernfoodrecipesapp.data
 
 import com.trailblazing.modernfoodrecipesapp.data.database.RecipesDao
-import com.trailblazing.modernfoodrecipesapp.data.database.RecipesEntity
+import com.trailblazing.modernfoodrecipesapp.data.database.entities.RecipesEntity
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
