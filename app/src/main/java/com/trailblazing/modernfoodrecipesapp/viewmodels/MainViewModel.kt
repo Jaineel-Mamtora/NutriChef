@@ -39,13 +39,13 @@ class MainViewModel @ViewModelInject constructor(
         }
     }
 
-    private fun deleteFavoriteRecipes(favoritesEntity: FavoritesEntity) {
+    fun deleteFavoriteRecipes(favoritesEntity: FavoritesEntity) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.local.deleteFavoriteRecipe(favoritesEntity)
         }
     }
 
-    private fun deleteAllFavoriteRecipes() {
+    fun deleteAllFavoriteRecipes() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.local.deleteAllFavoriteRecipes()
         }
