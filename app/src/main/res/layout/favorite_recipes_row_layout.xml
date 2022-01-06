@@ -37,6 +37,7 @@
 
                 <ImageView
                     android:id="@+id/favorite_recipeImageView"
+                    loadImageFromUrl="@{favoritesEntity.result.image}"
                     android:layout_width="200dp"
                     android:layout_height="0dp"
                     android:scaleType="centerCrop"
@@ -55,6 +56,7 @@
                     android:ellipsize="end"
                     android:fontFamily="@font/courgette"
                     android:maxLines="2"
+                    android:text="@{favoritesEntity.result.title}"
                     android:textColor="@color/darker"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -69,6 +71,7 @@
                     android:layout_marginTop="12dp"
                     android:ellipsize="end"
                     android:maxLines="3"
+                    android:text="@{favoritesEntity.result.summary}"
                     android:textColor="@color/darkGray"
                     app:layout_constraintEnd_toEndOf="@+id/favorite_titleTextView"
                     app:layout_constraintStart_toStartOf="@+id/favorite_titleTextView"
@@ -89,6 +92,7 @@
 
                 <TextView
                     android:id="@+id/favorite_heartTextView"
+                    setNumberOfLikes="@{favoritesEntity.result.aggregateLikes}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="100"
@@ -109,6 +113,7 @@
 
                 <TextView
                     android:id="@+id/favorite_clockTextView"
+                    setNumberOfMinutes="@{favoritesEntity.result.readyInMinutes}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -120,6 +125,7 @@
 
                 <ImageView
                     android:id="@+id/favorite_leafImageView"
+                    applyVeganColor="@{favoritesEntity.result.vegan}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="@+id/favorite_leafTextView"
@@ -129,6 +135,7 @@
 
                 <TextView
                     android:id="@+id/favorite_leafTextView"
+                    applyVeganColor="@{favoritesEntity.result.vegan}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
