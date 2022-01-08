@@ -20,10 +20,12 @@
         <entry key="..\:/AndroidStudioProjects/ModernFoodRecipesApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.32037037037037036" />
         <entry key="..\:/AndroidStudioProjects/ModernFoodRecipesApp/app/src/main/res/menu/recipes_menu.xml" value="0.3171171171171171" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/drawable/gradient_overlay.xml" value="0.3828125" />
+        <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/drawable/ic_food_joke_background_light.xml" value="0.3828125" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/activity_details.xml" value="0.266304347826087" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/favorite_recipes_row_layout.xml" value="0.5" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/fragment_favorite_recipes.xml" value="0.33" />
+        <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/fragment_food_joke.xml" value="0.5" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/fragment_ingredients.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/fragment_instructions.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/fragment_overview.xml" value="0.67" />
@@ -31,6 +33,7 @@
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/ingredients_row_layout.xml" value="0.5" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/placeholder_row_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/layout/recipes_row_layout.xml" value="0.33" />
+        <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/menu/favorite_recipes_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/menu/favorites_contextual_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Jaineel/StudioProjects/Modern-Food-Recipes-App/app/src/main/res/menu/file_details_menu.xml" value="0.36666666666666664" />
       </map>
