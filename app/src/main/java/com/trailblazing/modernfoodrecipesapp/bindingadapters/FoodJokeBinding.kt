@@ -2,6 +2,7 @@ package com.trailblazing.modernfoodrecipesapp.bindingadapters
 
 import android.view.View
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.google.android.material.card.MaterialCardView
 import com.trailblazing.modernfoodrecipesapp.data.database.entities.FoodJokeEntity
@@ -38,7 +39,7 @@ class FoodJokeBinding {
                         is MaterialCardView -> {
                             if (database != null) {
                                 if (database.isEmpty()) {
-                                    view.visibility = View.VISIBLE
+                                    view.visibility = View.INVISIBLE
                                 }
                             }
                         }
@@ -55,6 +56,29 @@ class FoodJokeBinding {
                     }
                 }
                 else -> {}
+            }
+        }
+
+        @BindingAdapter("readApiResponse4", "readDatabase4", requireAll = true)
+        @JvmStatic
+        fun setErrorViewsVisibility(
+            view: View,
+            apiResponse: NetworkResult<FoodJoke>?,
+            database: List<FoodJokeEntity>?
+        ) {
+            if (database != null) {
+                if (database.isEmpty()) {
+                    view.visibility = View.VISIBLE
+                    if (view is TextView) {
+                        if (apiResponse != null) {
+                            view.text = apiResponse.message.toString()
+                        }
+                    }
+                }
+            }
+
+            if (apiResponse is NetworkResult.Success) {
+                view.visibility = View.INVISIBLE
             }
         }
 
