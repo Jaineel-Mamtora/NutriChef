@@ -2,7 +2,7 @@
 
 ### Building Native Android Food Recipes Application using Kotlin and Spoonacular API
 
---- Developing the application using:
+→ Developing the application using:
 
  - ROOM Database
  - Dependency Injection - Dagger-Hilt
@@ -23,11 +23,31 @@
   <tr>
     <td>HomeScreen</td>
     <td>Filters</td>
-    <td>Search</td>
-   </tr> 
+    <td>Favorite Recipes</td>
+ </tr>
    <tr>
-     <td><img src = "https://user-images.githubusercontent.com/38665793/147126504-0c35f619-1310-4314-a9b5-e52fd9b60e4c.png" width="216" height="480" /></td>
-     <td><img src = "https://user-images.githubusercontent.com/38665793/147126532-3cad47b1-3c42-4d93-9f1c-4c70ba2aa7a6.png" width="216" height="480" /></td>
-     <td><img src = "https://user-images.githubusercontent.com/38665793/147126543-13621f50-d924-4bf3-806c-1ad87c745c1b.png" width="216" height="480" /></td>
+     <td><img src = "https://user-images.githubusercontent.com/38665793/159008354-a541bedf-84cc-4cde-b979-f1be93e65f7f.png" width="270" height="546.75" /></td>
+     <td><img src = "https://user-images.githubusercontent.com/38665793/159008466-6fd033dc-1729-4f9c-9744-67357906b9d5.png" width="270" height="546.75" /></td>
+     <td><img src = "https://user-images.githubusercontent.com/38665793/159008511-d87bd36a-84dc-488f-af65-d0464473682a.png" width="270" height="546.75" /></td>
+  </tr>
+ <tr>
+    <td>Food Joke</td>
+    <td>Recipe Details Overview</td>
+    <td>Recipe Details Ingredients</td>
+ </tr>
+ <tr>
+     <td><img src = "https://user-images.githubusercontent.com/38665793/159008600-bbc4ba58-871b-41a5-bc75-ee3c4c670012.png" width="270" height="546.75" /></td>
+     <td><img src = "https://user-images.githubusercontent.com/38665793/159008635-91ebe4bb-0b4b-4760-b20e-627e4f3c71de.png" width="270" height="546.75" /></td>
+     <td><img src = "https://user-images.githubusercontent.com/38665793/159008673-58cafd87-08b7-4a5e-b2e7-564cebd4315d.png" width="270" height="546.75" /></td>
+  </tr>
+ <tr>
+    <td>Recipe Details Instructions</td>
+    <td>Recipe Search</td>
+    <td></td>
+ </tr>
+ <tr>
+     <td><img src = "https://user-images.githubusercontent.com/38665793/159008742-53a3dad7-2af6-471e-88c6-9952114c5852.png" width="270" height="546.75" /></td>
+     <td><img src = "https://user-images.githubusercontent.com/38665793/159008774-5693d299-3704-45ba-8323-e71f7a9bd5b7.png" width="270" height="546.75" /></td>
+     <td></td>
   </tr>
 </table>
