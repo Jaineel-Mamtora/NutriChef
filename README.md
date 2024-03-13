@@ -1,4 +1,4 @@
-# Modern-Food-Recipes-App
+# NutriChef
 
 ### Building Native Android Food Recipes Application using Kotlin and Spoonacular API
 
